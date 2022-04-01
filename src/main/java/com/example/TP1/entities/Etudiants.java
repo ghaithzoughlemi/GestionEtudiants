@@ -37,13 +37,15 @@ public class Etudiants {
 	@JoinColumn(name = "dept")
 	private Departement dt;
 
+	@ManyToOne
+	@JoinColumn(name = "spec")
+	private promotion promo;
+
 	private Double moyenne;
 	private String imageEtudiant;
 
-
-
-	public Etudiants(String nomE, int niveau, LocalDateTime dateE, specialites st, 
-			Departement dt, Double moyenne, String imageEtudiant) {
+	public Etudiants(String nomE, int niveau, LocalDateTime dateE, specialites st, Departement dt, Double moyenne,
+			String imageEtudiant) {
 		super();
 		this.nome = nomE;
 		this.Niveau = niveau;
